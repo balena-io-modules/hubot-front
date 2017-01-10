@@ -1,6 +1,6 @@
 # A [Hubot](https://github.com/github/hubot) adapter
 
-A description of the adapter
+This is an adapter for the Front collaborative inbox API.
 
 ## Compatibility
 

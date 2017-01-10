@@ -1,2 +1,4 @@
-node_modules/
+node_modules
+.hubot_history
+.node-version
 .idea/
