@@ -23,10 +23,9 @@
   },
   "dependencies": {
     "coffee-script": "^1.12.2",
-    "hubot-abstract-api-adapter": "github:resin-io-modules/hubot-abstract-api-adapter",
+    "hubot-abstract-api-adapter": "github:resin-io-modules/hubot-abstract-api-adapter#alpha",
     "moment": "^2.17.1",
-    "parent-require": "^1.0.0",
-    "request": "^2.79.0"
+    "parent-require": "^1.0.0"
   },
   "devDependencies": {
     "hubot": "^2.19.0",
