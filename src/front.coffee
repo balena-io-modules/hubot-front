@@ -74,24 +74,8 @@ class Front extends AbstractAPIAdapter
 			{ ids: { comment: message.id, thread: message.conversation?.id, flow: inbox.id } }
 		)
 
-	###*
-	* Given the parsed body from the Rest API, extract new ids object and pass it along the chain.
-	* You can assume that the HTTP request returned error is falsey and statusCode is 200.
-	* @param {object} JSON parsed body from the HTTP request
-	* @param {function} (error, ids) next function in the chain.  ids = {thread, comment?}
-	###
-	parseResponse: (response, next) ->
-		next null,
-			thread: response.conversation_reference.split('@')[0]
+	parseResponse: (response) -> thread: response.conversation_reference.split('@')[0]
 
-	###*
-	* Given suitable details will return request details
-	* @param {string} API key of the identity to use
-	* @param {string} id of the flow to update
-	* @param {string} text to post
-	* @param {string}? id of the thread to update
-	* @return {object} {url, headers, payload}
-	###
 	buildRequest: (user, channel, text, conversation) ->
 		returnValue =
 			payload:
